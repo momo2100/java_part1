@@ -1,5 +1,5 @@
 package ctf.java.part1;
-import java.io.*;  
+import java.util.Scanner; 
 
 public class Assigment4_4 {
 	public static void main(String[] args) {
@@ -45,10 +45,13 @@ public class Assigment4_4 {
 		//2.
 		
 		String inpString = "";
-		Console con = System.console();   
+		//Console con = System.console();   
 		 do {
-			 inpString = con.readLine("Enter number [odd is quit] : "); 
-		 } while(Integer.parseInt(inpString) %2 != 0);
+			 System.out.print("Enter number [odd is quit] : ");
+			 Scanner in = new Scanner(System.in);
+			 //inpString = con.readLine("Enter number [odd is quit] : "); 
+			 inpString = in.nextLine();
+		 } while(Integer.parseInt(inpString) %2 == 0);
 		 
 		// Lab 8.
 		//1.
